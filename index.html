@@ -27,7 +27,7 @@
         <div class="container">
             <div class="intro-wrap">
                 <div class="name-text">Liam Collins</div>
-                <div class="paragraph-light">https://github.com/B0N3head</div>
+                <div class="paragraph-light"onclick="document.location='https://github.com/B0N3head'">https://github.com/B0N3head</div>
                 <h1 class="heading-jumbo" style="padding-top: 40px;">TRUTH or DARE</h1>
             </div>
         </div>
@@ -36,10 +36,10 @@
         <div class="columns w-row">
             <div class="w-col w-col-5">
                 <div class="text-block">TRUTH</div>
-                <div class="text-block-3" id="truthText">TRUTH</div>
+                <div class="text-block-3" id="truthText2">TRUTH</div>
             </div>
             <div class="w-col w-col-2">
-                <div class="text-block-2">OR</div>
+                <div class="text-block-2" onclick="run()">OR</div>
             </div>
             <div class="w-col w-col-5">
                 <div class="text-block">DARE</div>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="work-description">
-            <a class="project-name-link" onclick="run()">Next Question</a>
+            <a class="project-name-link" id="nextText" onclick="run()">Next Question</a>
         </div>
     </div>
     <div class="wf-section">
@@ -58,12 +58,15 @@
         <div class="text-block-5">Settings</div>
         <div class="paragraph-2" style="padding-bottom: 20px;">
             <input type="checkbox" id="clasicCHECK" name="clasicCHECK" value="clasicMode">
-            <label for="clasicCHECK" style="display: inline;"> - Clasic Truth or Dare</label><br>
+            <label for="clasicCHECK" style="display: inline;"> - Clasic Truth or Dare (Not working atm 🥱)</label><br>
             <input type="checkbox" id="alcoholCheck" name="alcoholCheck" value="aDares">
-            <label for="alcoholCheck" style="display: inline;"> - Include Alcohol Dares</label><br>
+            <label for="alcoholCheck" style="display: inline;"> - Remove Alcohol Dares</label><br>
             <input type="checkbox" id="sexualCheck" name="sexualCheck" value="sexualMode">
-            <label for="sexualCheck" style="display: inline;"> - Lude Truths 😳</label><br>
+            <label for="sexualCheck" style="display: inline;"> - Remove Lude Shit 😳</label><br>
         </div>
+    </div><div class="wf-section" style="margin-top: 70px;margin-bottom: 30px;">
+        <div class="text-block-5">Huge thanks to everyone bellow for helping with questions 🙏</div>
+        <p class="paragraph-2" id="historyTEXT">Isaac, Abby, Sampson, Cooper, Brayden, Kankri, Josh, Sunny</p>
     </div>
 </body>
 

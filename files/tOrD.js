@@ -9,8 +9,8 @@ var truthQuestions = [
 	},
 	{
 		"ID": "2",
-		"Type": "Tell everyone. ",
-		"Base": "pool or beach",
+		"Type": "Tell everyone",
+		"Base": "if you prefer the pool or beach",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -18,7 +18,7 @@ var truthQuestions = [
 	{
 		"ID": "3",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "what smell do you hate that doesn't seem to bother other people",
+		"Base": "what smell you hate that doesn't seem to bother other people",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -50,7 +50,7 @@ var truthQuestions = [
 	{
 		"ID": "7",
 		"Type": "Tell everyone",
-		"Base": ", other than your own, who your favorite parents are out of the group",
+		"Base": "who your favorite parents are out of the group (can't be your own)",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -58,7 +58,7 @@ var truthQuestions = [
 	{
 		"ID": "8",
 		"Type": "Tell everyone",
-		"Base": "what the weirdest thing you love eating is",
+		"Base": "the weirdest thing you love eating",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -66,7 +66,7 @@ var truthQuestions = [
 	{
 		"ID": "9",
 		"Type": "Tell everyone",
-		"Base": "the spontaneous thing you've done",
+		"Base": "the most spontaneous thing you've done",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -82,10 +82,10 @@ var truthQuestions = [
 	{
 		"ID": "11",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "your biggest Turn-off",
+		"Base": "your biggest turn-off",
 		"Action": ".",
 		"pAction": ".",
-		"isSexual": "."
+		"isSexual": "y"
 	},
 	{
 		"ID": "12",
@@ -106,7 +106,7 @@ var truthQuestions = [
 	{
 		"ID": "14",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "your last new year's resolution ",
+		"Base": "your last New Year's Resolution ",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -122,7 +122,7 @@ var truthQuestions = [
 	{
 		"ID": "16",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "how good is your gag reflex is (deeper = better)",
+		"Base": "how good your gag reflex is?/10 (10 = deep af)",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "y"
@@ -146,7 +146,7 @@ var truthQuestions = [
 	{
 		"ID": "19",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "your longest dry spell",
+		"Base": "your biggest turn on",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "y"
@@ -253,7 +253,7 @@ var truthQuestions = [
 		"Base": "whether you would prefer a double date or privacy",
 		"Action": ".",
 		"pAction": ".",
-		"isSexual": "."
+		"isSexual": "y"
 	},
 	{
 		"ID": "33",
@@ -466,9 +466,9 @@ var truthQuestions = [
 	{
 		"ID": "59",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "strangest song you enjoy but others don't",
-		"Action": ".",
-		"pAction": ".",
+		"Base": "the strangest song you enjoy but others don't",
+		"Action": "Play that shit outloud",
+		"pAction": "40",
 		"isSexual": "."
 	},
 	{
@@ -538,7 +538,7 @@ var truthQuestions = [
 	{
 		"ID": "68",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "something that you want to do but haven't gotten the opportunity",
+		"Base": "something that you want to do but haven't been gotten the opportunity",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "."
@@ -658,7 +658,7 @@ var truthQuestions = [
 	{
 		"ID": "83",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "where/when was the weirdest place you've been horny",
+		"Base": "where or when was the weirdest place you've been horny",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "y"
@@ -677,7 +677,7 @@ var truthQuestions = [
 		"Base": "if you could kiss someone in the grade (same sex) who would it be. ",
 		"Action": ".",
 		"pAction": ".",
-		"isSexual": "."
+		"isSexual": "y"
 	},
 	{
 		"ID": "86",
@@ -685,7 +685,7 @@ var truthQuestions = [
 		"Base": "if you could kiss someone in the grade (opposite sex) who would it be?",
 		"Action": ".",
 		"pAction": ".",
-		"isSexual": "."
+		"isSexual": "y"
 	},
 	{
 		"ID": "87",
@@ -714,7 +714,7 @@ var truthQuestions = [
 	{
 		"ID": "90",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "if you prefer ( dick / ass / balls / boobs / butt ) the most",
+		"Base": "if you prefer ( dick / ass / balls / boobs ) the most",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "y"
@@ -722,7 +722,7 @@ var truthQuestions = [
 	{
 		"ID": "91",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "if you have ever watched porn featuring only people the same gender",
+		"Base": "if you have ever watched porn featuring only females",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "y"
@@ -730,10 +730,410 @@ var truthQuestions = [
 	{
 		"ID": "92",
 		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
-		"Base": "if you have ever watched porn featuring only people of your gender",
+		"Base": "if you have ever watched porn featuring only make",
 		"Action": ".",
 		"pAction": ".",
 		"isSexual": "y"
+	},
+	{
+		"ID": "93",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever watched/seen furry porn",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "94",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever played a porn game",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "95",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you know someone elses dick length",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "96",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "your cock length or deep throat depth",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "97",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have been shown or sent a nude to/from your grade",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "98",
+		"Type": "Tell everyone",
+		"Base": "if you have you ever plagerised someone",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "99",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever tickled your taint",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "100",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have you ever scratched and sniffed your privates ",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "101",
+		"Type": "Tell everyone",
+		"Base": "the longest time you have held a poop back ",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "102",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever urinated in public (not a public toilet)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "103",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever you pooped in the shower",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "104",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever seen your gandparent naked",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "105",
+		"Type": "Tell everyone",
+		"Base": "if you like watermelon ",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "106",
+		"Type": "Tell everyone",
+		"Base": "if you like tomatoes",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "107",
+		"Type": "Tell everyone",
+		"Base": "if you like apples",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "108",
+		"Type": "Tell everyone",
+		"Base": "if you have ever engaged in an act of fisticuffs ",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "109",
+		"Type": "Tell everyone",
+		"Base": "if you have ever willingly drunk expired milk",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "110",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "one of your fetishes (something that you require to get off to)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "111",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "your worst kink (something that helps you get off)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "112",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "the most disgusting thing you have done",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "113",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "the worst date you have been on",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "114",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever sniffed someone else",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "115",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever told someone they smelt like shit (respectively)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "116",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "the biggest ass you've seen (irl)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "117",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "the last person you have masturbated to",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "118",
+		"Type": "Tell everyone",
+		"Base": "if you would ever cosplay",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "119",
+		"Type": "Tell everyone",
+		"Base": "the most amount of money you've spent at once",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "120",
+		"Type": "Tell everyone",
+		"Base": "the worst birthday you had",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "121",
+		"Type": "Tell everyone",
+		"Base": "the best birthday present you've gotten",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "122",
+		"Type": "Tell everyone",
+		"Base": "your childhood obsession (dinosaurs, barbie, lego, etc)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "123",
+		"Type": "Tell everyone",
+		"Base": "what colour you would dye your hair if you were forced to (not natural)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "124",
+		"Type": "Tell everyone",
+		"Base": "the worst food you've eaten",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "125",
+		"Type": "Tell everyone",
+		"Base": "your least favorite vegetable",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "126",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "the worst body modifications you've gotten (bad haircut, bad tan)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "127",
+		"Type": "Tell everyone",
+		"Base": "if you are more of a dog or cat person",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "128",
+		"Type": "Tell everyone",
+		"Base": "your opinion on weezer",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "129",
+		"Type": "Tell everyone",
+		"Base": "your opinion on radiohead",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "130",
+		"Type": "Tell everyone",
+		"Base": "your favorite facial feature of yourself",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "131",
+		"Type": "Tell everyone",
+		"Base": "your Hogwarts house",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "132",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "who you would chose if you had to cover someone in peanut butter and lick it off them",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "133",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "you biggest turn on",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "134",
+		"Type": "Tell everyone",
+		"Base": "why do they call it oven when you of in the cold food of out hot eat the food",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "135",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "would you suck nuts",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "136",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever smoked (cigarette / weed / not vape)",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "137",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you have ever vaped",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "138",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "if you clean your legs in the shower",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "139",
+		"Type": "Tell everyone",
+		"Base": "if you have ever cursed at a teacher in anger",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "140",
+		"Type": "Tell everyone",
+		"Base": "your favorite teacher",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
+	},
+	{
+		"ID": "141",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "your favorite porn star",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "y"
+	},
+	{
+		"ID": "142",
+		"Type": "Tell everyone,Tell the person to your left,Tell the person to your right",
+		"Base": "your phone password",
+		"Action": ".",
+		"pAction": ".",
+		"isSexual": "."
 	}
 ];
 
@@ -744,7 +1144,7 @@ var dares = [
 		"isAlcohol": "."
 	},
 	{
-		"Dares": "Get the person to your %LorR to message the %number person on %social a message using only emojis",
+		"Dares": "Get the person to your %LorR to text the %number person on %social using only emojis",
 		"isSexual": ".",
 		"isAlcohol": "."
 	},
@@ -844,7 +1244,7 @@ var dares = [
 		"isAlcohol": "."
 	},
 	{
-		"Dares": "Get the person to you %LorR to punch you in the gut",
+		"Dares": "Get the person to your %LorR to punch you in the gut",
 		"isSexual": ".",
 		"isAlcohol": "."
 	},
@@ -874,9 +1274,44 @@ var dares = [
 		"isAlcohol": "."
 	},
 	{
-		"Dares": "kiss the person on the %LorR on their cheek",
+		"Dares": "Kiss the person on the %LorR on their cheek",
 		"isSexual": "y",
 		"isAlcohol": "."
+	},
+	{
+		"Dares": "Show the most embassasing photo on your phone",
+		"isSexual": ".",
+		"isAlcohol": "."
+	},
+	{
+		"Dares": "Get bitch slapped by the person on your %LorR",
+		"isSexual": ".",
+		"isAlcohol": "."
+	},
+	{
+		"Dares": "Put 5 available liquids in a cup in a drink and skull it",
+		"isSexual": ".",
+		"isAlcohol": "y"
+	},
+	{
+		"Dares": "Take a gay quiz",
+		"isSexual": ".",
+		"isAlcohol": "."
+	},
+	{
+		"Dares": "Lick the persons phone screen to your %LorR",
+		"isSexual": "y",
+		"isAlcohol": "."
+	},
+	{
+		"Dares": "Slap yourself in the face",
+		"isSexual": ".",
+		"isAlcohol": "."
+	},
+	{
+		"Dares": "Put the 3 closest available liquids in a cup in a drink and skull it (nothing human or from the ground)",
+		"isSexual": ".",
+		"isAlcohol": "y"
 	}
 ];
 
@@ -884,22 +1319,27 @@ let histroy = "";
 let tempTruthArray = [];
 let count = 0;
 
-let lorR = ["left","right"];
-let number = ["1st","2nd","3rd","4th","5th"];
-let social = ["Snapchat","Instagram","Messenger"];
-let pic = ["foot picture","face picture","floor picture","animal picture"];
-let bPart = ["foot","face","back","arm","stomach"];
-let drawPart = ["foot","hand","mouth"];
+let lorR = ["left", "right"];
+let number = ["1st", "2nd", "3rd", "4th", "5th"];
+let social = ["Snapchat", "Instagram", "Messenger"];
+let pic = ["foot picture", "face picture", "floor picture", "animal picture"];
+let bPart = ["foot", "face", "back", "arm", "stomach"];
+let drawPart = ["foot", "hand", "mouth"];
 let marker = ["marker"];
-let exercise = ["100","50","30","20","10"];
+let exercise = ["100", "50", "30", "20", "10"];
 
 let clasicQuestions = false;
 let sexualQuestions = false;
 let alcoholQuestions = false;
+let extraAction = false;
+
+let lazyHistory1 = "";
+let lazyHistory2 = "";
+let lazyHistory3 = "";
 
 function setup() {
 	document.getElementById('historyTEXT').innerHTML = "History will show bellow";
-	document.getElementById('truthText').innerHTML = "Click Next Question To Start";
+	document.getElementById('truthText2').innerHTML = "Click Next Question To Start";
 	document.getElementById('dareText').innerHTML = "Click Next Question To Start";
 	document.getElementById('clasicCHECK').onclick = function () {
 		clasicQuestions = this.checked;
@@ -913,10 +1353,18 @@ function setup() {
 		sexualQuestions = this.checked;
 		console.log(sexualQuestions);
 	};
+	document.getElementById("clasicCHECK").checked = false;
+	document.getElementById("alcoholCheck").checked = false;
+	document.getElementById("sexualCheck").checked = false;
 }
 
-function getQuestionData(aList) {
+function addHistory(addme){
+	lazyHistory3 = lazyHistory2;
+	lazyHistory2 = lazyHistory1;
+	lazyHistory1 = addme;
+}
 
+function getQuestionData() {
 	var lorRNumber = Math.floor(Math.random() * lorR.length);
 	var numberNumber = Math.floor(Math.random() * number.length);
 	var socialNumber = Math.floor(Math.random() * social.length);
@@ -928,32 +1376,66 @@ function getQuestionData(aList) {
 
 	if (tempTruthArray.length < 1) {
 		tempTruthArray.push.apply(tempTruthArray, truthQuestions);
-		console.log(tempTruthArray.length);
 		console.log("Reset");
 	}
 
+	let chosenTruth = null;
+	let removedE = null;
+	let sexual = null;
+	let chosenDare = null;
+	let alcohol = null;
+
 	if (tempTruthArray.length > 0) {
 		count++;
-		var chosenTruth = Math.floor(Math.random() * tempTruthArray.length);
-		var chosenDare = Math.floor(Math.random() * dares.length);
-		var randBase = Math.floor(Math.random() * truthQuestions[chosenTruth].Type.split(",").length);
-		var removedE = tempTruthArray.splice(chosenTruth, 1);
 
-		if (sexualQuestions) {
-			available.push(aList[i]);
-			doneTruthID.push(aList[i].ID);
-		} else if (alcoholQuestions) {
-			available.push(aList[i]);
-			doneTruthID.push(aList[i].ID);
+		let foundTruth = false;
+		let foundDare = false;
+		let random100 = Math.floor(Math.random() * 100);
+
+		console.log("------------------")
+		while (foundTruth == false) {
+			chosenTruth = Math.floor(Math.random() * tempTruthArray.length);
+			removedE = tempTruthArray.splice(chosenTruth, 1);
+			sexual = removedE[0].isSexual.includes("y");
+			console.log("Checking: " + removedE[0].Base)
+			//if true then dont allow
+			if ((sexual == true && sexualQuestions == false) || sexual == false) {
+				console.log(removedE[0].isSexual + "=" + sexual + " | " + sexualQuestions)
+				foundTruth = true;
+			}
 		}
-		
+		while (foundDare == false) {
+			chosenDare = Math.floor(Math.random() * dares.length);
+			alcohol = dares[chosenDare].isAlcohol.includes("y");
+			sexual = dares[chosenDare].isSexual.includes("y");
+			console.log("Checking: " + dares[chosenDare].Dares)
+			if (((alcohol == true && alcoholQuestions == false) || alcohol == false)&&(sexual == true && sexualQuestions == false) || sexual == false) {
+				console.log(dares[chosenDare].isAlcohol + "=" + alcohol + " | " + alcoholQuestions)
+				foundDare = true;
+			}
+		}
+
+		let randBase = Math.floor(Math.random() * removedE[0].Type.split(",").length);
+		let randBaseText = removedE[0].Type.split(",")[randBase];
+		console.log(randBaseText);
+		if (randBaseText == null || randBaseText == "undefined") {
+			console.log("Shit was null")
+			randBaseText = "Tell everyone"
+		}
 		let finalDare = dares[chosenDare].Dares.replace("%LorR", lorR[lorRNumber]).replace("%number", number[numberNumber]).replace("%social", social[socialNumber]).replace("%pic", pic[picNumber]).replace("%bPart", bPart[bPartNumber]).replace("%drawPart", drawPart[drawPartNumber]).replace("%marker", marker[markerNuumber]).replace("%exercise", exercise[exerciseNumber]);
-		let finalQuestion = removedE[0].Type.split(",")[randBase] +" "+removedE[0].Base;
-		
-		histroy = "\nChoice" + count + "\n\tTruth: " + finalQuestion +  "\n\tDare: " +finalDare + "\n" + histroy;
-		document.getElementById("dareText").innerHTML = finalDare;
-		document.getElementById("truthText").innerHTML = finalQuestion;
-		document.getElementById("historyTEXT").innerHTML = histroy;
+		let finalQuestion = randBaseText + " " + removedE[0].Base;
+		addHistory("\nChoice" + count + "\n\tTruth: " + finalQuestion + "\n\tDare: " + finalDare + "\n");
+		document.getElementById("dareText").innerText = finalDare;
+		document.getElementById("truthText2").innerText = finalQuestion;
+		document.getElementById("historyTEXT").innerHTML = lazyHistory1+lazyHistory2+lazyHistory3;
+
+		if (removedE[0].pAction < random100){
+			document.getElementById("nextText").innerText = removedE[0].Action;
+			extraAction=true;
+		}
+		else{
+			document.getElementById("nextText").innerText = "Next Question";
+		}
 	}
 }
 
@@ -962,23 +1444,10 @@ function randInRange(min, max) {
 }
 
 function run() {
-	let truth = getQuestionData(truthQuestions);
-
-	document.getElementById('truthText').innerHTML = truth;
-	// let dare = getQuestionData(truthQuestions, doneDare);
-	// console.log("Bruh")
-	// document.getElementById('historyTEXT').innerHTML = "Bruh";
-	// document.getElementById('historyTEXT').innerHTML = truth.Type;
-	// document.getElementById('historyTEXT').innerHTML = truth.Type;
-
-}
-
-function sum() {
-	let truth = getQuestion(truthQuestions, doneTruth);
-	truth = getQuestion(truthQuestions, doneDare);
-
-	var num1 = document.myform.number1.value;
-	var num2 = document.myform.number2.value;
-	var sum = parseInt(num1) + parseInt(num2);
-	document.getElementById('add').innerHTML = sum;
+	if (extraAction) {
+		extraAction = false;
+		document.getElementById("nextText").innerText = "Next Question";
+	} else {
+		getQuestionData();
+	}
 }
