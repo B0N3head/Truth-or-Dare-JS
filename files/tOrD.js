@@ -1209,12 +1209,12 @@ var dares = [
 		"isAlcohol": "y"
 	},
 	{
-		"Dares": "The person on your left and right to wegie you",
+		"Dares": "Get the people to your left and right to wegie you",
 		"isSexual": ".",
 		"isAlcohol": "."
 	},
 	{
-		"Dares": "Let the person to your %LorR call your %number ",
+		"Dares": "Let the person to your %LorR call your %number most recent contact",
 		"isSexual": ".",
 		"isAlcohol": "."
 	},
