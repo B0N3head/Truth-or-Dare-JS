@@ -84,11 +84,11 @@ function setup() {
 
 			trueTruthQuestions = data;
 		});
-
+	tempTruthArray.push.apply(tempTruthArray, truthQuestions);
 	//Shows the js has loaded
 	document.getElementById('historyTEXT').innerHTML = "History will show bellow";
-	document.getElementById('truthText2').innerHTML = "Click Next Question To Start";
-	document.getElementById('dareText').innerHTML = "Click Next Question To Start";
+	document.getElementById('truthText2').innerHTML = "Chose a pack to start playing";
+	document.getElementById('dareText').innerHTML = "Chose a pack to start playing";
 
 	//Setup checkbox functionality (this was done lazy)
 	document.getElementById('removeAlcoDares').onclick = function () { removeAlcoDares = this.innerText; };
