@@ -1,5 +1,5 @@
 var trueTruthQuestions = [];
-var truthQuestions = [];
+var truthQuestions = {"ID":"0","Type":"Tell everyone","Pack_Name":"Base","Base":"Bruh chose a pack or to","Description":"","Action":"","pAction":".","isSexual":"."};
 var dares = [];
 
 let histroy = "";
@@ -79,12 +79,10 @@ function setup() {
 
 			tempArray.forEach(element => {
 				document.getElementById('packs-checks').insertAdjacentHTML("beforebegin", `<input type="checkbox" id="${element}" name="${element}" value="${element}"><label for="${element}" style="display: inline;"> - ${element}</label><br>`)
-				document.getElementById(element).checked = true;
 				document.getElementById(element).onclick = function () { togglePack(`${element}`, this.checked) };
 			});
 
 			trueTruthQuestions = data;
-			truthQuestions = trueTruthQuestions;
 		});
 
 	//Shows the js has loaded
