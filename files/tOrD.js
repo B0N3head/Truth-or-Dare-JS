@@ -38,8 +38,6 @@ function togglePack(pack, checkboxState) {
 			truthQuestions.push(question);
 	})
 	tempTruthArray = truthQuestions;
-	console.log(pack, checkboxState);
-	console.log(truthQuestions)
 }
 
 function setup() {
@@ -53,7 +51,6 @@ function setup() {
 			let tempArray = [];
 			let total = 0;
 			data.forEach((row) => {
-				console.log(row.Pack_Name)
 				total++;
 				//Add checkbox pack data to lists
 				if (!tempArray.includes(row.Pack_Name) && row.Pack_Name.length > 2) { tempArray.push(row.Pack_Name); }
