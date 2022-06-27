@@ -12,13 +12,13 @@ let count = 0;
 let lorR = ["left", "right"];
 let number = ["1st", "2nd", "3rd", "4th", "5th"];
 let social = ["Snapchat", "Instagram", "Messenger"];
-let pic = ["foot picture", "face picture", "floor picture", "animal picture"];
+let pic = ["foot", "face", "floor", "animal"];
 let bPart = ["foot", "face", "back", "arm", "stomach"];
 let drawPart = ["foot", "hand", "mouth"];
-let marker = ["marker"];
 let exercise = ["100", "50", "30", "20", "10"];
 
 let removeDirections = false;
+let desktopText = false;
 let removeSexualTruth = false;
 let removeAlcoDares = false;
 let extraAction = false;
@@ -44,41 +44,41 @@ function togglePack(pack, checkboxState) {
 
 function setup() {
 	//Get questions from online database 
-	fetch(
-		"https://opensheet.elk.sh/1x2XTfl7N_mYvOYELSsf2KlGOjVFfWKMYKWIIVGcbM0Q/Dare"
-	)
+	fetch("https://opensheet.elk.sh/1x2XTfl7N_mYvOYELSsf2KlGOjVFfWKMYKWIIVGcbM0Q/Dare").then((res) => res.json()).then((data) => { dares = data; });
+
+
+	fetch("https://opensheet.elk.sh/1x2XTfl7N_mYvOYELSsf2KlGOjVFfWKMYKWIIVGcbM0Q/Truth")
 		.then((res) => res.json())
 		.then((data) => {
-
-			dares = data;
-
-		});
-
-
-	fetch(
-		"https://opensheet.elk.sh/1x2XTfl7N_mYvOYELSsf2KlGOjVFfWKMYKWIIVGcbM0Q/Truth"
-	)
-		.then((res) => res.json())
-		.then((data) => {
-
 			let tempArray = [];
+			let total = 0;
 			data.forEach((row) => {
-				if (!tempArray.includes(row.Pack_Name) && row.Pack_Name.length > 2) {
-					//Add checkbox packs
-					tempArray.push(row.Pack_Name);
-				}
+				console.log(row.Pack_Name)
+				total++;
+				//Add checkbox pack data to lists
+				if (!tempArray.includes(row.Pack_Name) && row.Pack_Name.length > 2) { tempArray.push(row.Pack_Name); }
 			});
+
+			document.getElementById("qpack").innerText = `Question Packs (${total} Questions)`;
+			//Sort list alpha ascending
 			tempArray.sort(function (a, b) {
 				var nameA = a.toLowerCase(), nameB = b.toLowerCase();
-				if (nameA < nameB) //sort string ascending
+				if (nameA < nameB)
 					return -1;
 				if (nameA > nameB)
 					return 1;
-				return 0; //default return value (no sorting)
+				return 0;
 			});
 
+			//Create checkboxes and set interactions
 			tempArray.forEach(element => {
-				document.getElementById('packs-checks').insertAdjacentHTML("beforebegin", `<input type="checkbox" id="${element}" name="${element}" value="${element}"><label for="${element}" style="display: inline;"> - ${element}</label><br>`)
+				let count = 0;
+				data.forEach((row) => {
+					if (row.Pack_Name == element) {
+						count++;
+					}
+				});
+				document.getElementById('packs-checks').insertAdjacentHTML("beforebegin", `<input type="checkbox" id="${element}" name="${element}" value="${element}"><label for="${element}" style="display: inline;"> - (${count}) - ${element}</label><br>`)
 				document.getElementById(element).checked = true;
 				document.getElementById(element).onclick = function () { togglePack(`${element}`, this.checked) };
 			});
@@ -88,11 +88,12 @@ function setup() {
 		});
 
 	//Shows the js has loaded
-	document.getElementById('historyTEXT').innerHTML = "History will show bellow";
-	document.getElementById('truthText2').innerHTML = "Click Next Question To Start";
-	document.getElementById('dareText').innerHTML = "Click Next Question To Start";
+	inText('historyTEXT', "History will show bellow");
+	inText('truthText2', "Click Next Question To Start");
+	inText('dareText', "Click Next Question To Start");
 
 	//Setup checkbox functionality (this was done lazy)
+	document.getElementById('desktopText').onclick = function () { desktopText = !desktopText; if (desktopText) { displayForm("desktopText"); closeForm("mobileText"); } else { closeForm("desktopText"); displayForm("mobileText"); } };
 	document.getElementById('removeAlcoDares').onclick = function () { removeAlcoDares = this.innerText; };
 	document.getElementById('removeSexualTruth').onclick = function () { removeSexualTruth = this.checked; };
 	document.getElementById('removeDirections').onclick = function () { removeDirections = this.checked; };
@@ -100,6 +101,13 @@ function setup() {
 	document.getElementById("removeAlcoDares").checked = false;
 	document.getElementById("removeSexualTruth").checked = false;
 	document.getElementById("removeDirections").checked = false;
+}
+
+function displayForm(className) {
+	document.getElementsByClassName(className)[0].style.display = "inherit";
+}
+function closeForm(className) {
+	document.getElementsByClassName(className)[0].style.display = "none";
 }
 
 function addHistory(addme) { lazyHistory2 = lazyHistory1; lazyHistory1 = addme; }
@@ -112,7 +120,6 @@ function getQuestionData() {
 	var picNumber = Math.floor(Math.random() * pic.length);
 	var bPartNumber = Math.floor(Math.random() * bPart.length);
 	var drawPartNumber = Math.floor(Math.random() * drawPart.length);
-	var markerNuumber = Math.floor(Math.random() * marker.length);
 	var exerciseNumber = Math.floor(Math.random() * exercise.length);
 
 	if (tempTruthArray.length < 1) {
@@ -131,7 +138,6 @@ function getQuestionData() {
 
 		let foundTruth = false;
 		let foundDare = false;
-		let random100 = Math.floor(Math.random() * 100);
 
 		while (foundTruth == false) {
 			chosenTruth = Math.floor(Math.random() * tempTruthArray.length);
@@ -148,40 +154,53 @@ function getQuestionData() {
 			if (((alcohol == true && removeAlcoDares == false) || alcohol == false) && (sexual == true && removeSexualTruth == false) || sexual == false) { foundDare = true; }
 		}
 
-		if (removedE[0].pAction == ".") { random100 = 101; }
 
 		let randBaseText = "Tell everyone"
 		if (removeDirections == false) {
-			let randBase = Math.floor(Math.random() * removedE[0].Type.split(",").length);
-			randBaseText = removedE[0].Type.split(",")[randBase];
+
+			if (removedE[0].Type == "2") {
+				randBaseText = ["Tell everyone", "Tell the person to your left", "Tell the person to your right", "Tell the person opposite to you"][Math.floor(Math.random() * 4)];
+			}
 			if (randBaseText == null || randBaseText == "undefined") {
 				console.log("Shit was null")
 				randBaseText = "Tell everyone"
 			}
 		}
 
+		//Add id to the list
 		idCount.push(removedE[0].ID);
 
-		let finalDare = dares[chosenDare].Dares.replace("%LorR", lorR[lorRNumber]).replace("%number", number[numberNumber]).replace("%social", social[socialNumber]).replace("%pic", pic[picNumber]).replace("%bPart", bPart[bPartNumber]).replace("%drawPart", drawPart[drawPartNumber]).replace("%marker", marker[markerNuumber]).replace("%exercise", exercise[exerciseNumber]);
+		//Setup the string for the dare and question
+		let finalDare = dares[chosenDare].Dares.replace("%LorR", lorR[lorRNumber]).replace("%number", number[numberNumber]).replace("%social", social[socialNumber]).replace("%pic", pic[picNumber] + "picture").replace("%bPart", bPart[bPartNumber]).replace("%drawPart", drawPart[drawPartNumber]).replace("%exercise", exercise[exerciseNumber]);
 		let finalQuestion = randBaseText + " " + removedE[0].Base;
+
 		if (removedE[0].Base[0] == ",")
 			finalQuestion = randBaseText.trim() + removedE[0].Base;
 
-		addHistory("\nPrompt: " + count + "\n\tTruth:\n\t\t" + finalQuestion + "\n\tDare:\n\t\t" + finalDare + "\n");
 		document.getElementById("dareText").innerText = finalDare;
+		document.getElementById("truthText").innerText = finalQuestion;
+		document.getElementById("dareText2").innerText = finalDare;
 		document.getElementById("truthText2").innerText = finalQuestion;
 		document.getElementById("historyTEXT").innerHTML = lazyHistory1 + lazyHistory2;
+		addHistory("\nPrompt: " + count + "\n\tTruth:\n\t\t" + finalQuestion + "\n\tDare:\n\t\t" + finalDare + "\n");
 
+		//Do we show the action?
+		let random100 = Math.floor(Math.random() * 100);
+		if (removedE[0].pAction == ".") { random100 = 101; }
 		if (removedE[0].pAction < random100) {
 			alert(removedE[0].Action);
+			document.getElementById("nextText2").innerText = removedE[0].Action;
 			document.getElementById("nextText").innerText = removedE[0].Action;
 			extraAction = true;
 		}
 		else {
-			document.getElementById("nextText").innerText = "Next Question";
+			document.getElementById("nextText2").innerText = "Next";
+			document.getElementById("nextText").innerText = "Next";
 		}
 	}
 }
+
+function inText(id, text) { document.getElementById(id).innerText = text; }
 
 function randInRange(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
@@ -195,6 +214,7 @@ function run() {
 		getQuestionData();
 	}
 }
+
 function help() {
 	if (current.Description == "")
 		alert("Sorry chief you're on your own for this one");
