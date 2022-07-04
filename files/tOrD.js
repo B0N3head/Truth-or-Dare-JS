@@ -76,7 +76,7 @@ function setup() {
 					}
 				});
 				document.getElementById('packs-checks').insertAdjacentHTML("beforebegin", `<input type="checkbox" id="${element}" name="${element}" value="${element}"><label for="${element}" style="display: inline;"> - (${count}) - ${element}</label><br>`)
-				document.getElementById(element).checked = true;
+				document.getElementById(element).checked = false;
 				document.getElementById(element).onclick = function () { togglePack(`${element}`, this.checked) };
 			});
 
