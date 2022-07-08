@@ -104,11 +104,11 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #fff;
+  background-color: rgb(22, 22, 22);
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333
+  color: rgb(216, 216, 216)
 }
 
 html.w-mod-touch * {
@@ -128,7 +128,7 @@ html.w-mod-touch * {
   display: inline-block;
   padding: 9px 15px;
   background-color: #3898ec;
-  color: #fff;
+  color: rgb(216, 216, 216);
   border: 0;
   line-height: inherit;
   text-decoration: none;
@@ -210,27 +210,10 @@ label {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: rgb(216, 216, 216);
   vertical-align: middle;
   background-color: #fff;
   border: 1px solid #ccc
-}
-
-.w-input:-moz-placeholder {
-  color: #999
-}
-
-.w-input::-moz-placeholder {
-  color: #999;
-  opacity: 1
-}
-
-.w-input:-ms-input-placeholder {
-  color: #999
-}
-
-.w-input::-webkit-input-placeholder {
-  color: #999
 }
 
 .w-input:focus {
@@ -400,7 +383,7 @@ label {
 
 body {
   font-family: Montserrat, sans-serif;
-  color: #1a1b1f;
+  color: rgb(216, 216, 216);
   font-size: 18px;
   line-height: 28px;
   font-weight: 400
@@ -462,16 +445,16 @@ a {
   display: block;
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
-  color: #1a1b1f;
+  color: rgb(216, 216, 216);
   text-decoration: underline
 }
 
 a:hover {
-  color: #32343a
+  color: rgb(184, 184, 184);
 }
 
 a:active {
-  color: #43464d
+  color: rgb(184, 184, 184);
 }
 
 label {
@@ -573,6 +556,11 @@ label {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center
+}
+
+.nowrap{
+  white-space: nowrap;
+  padding: 15px;
 }
 
 .project-name-link {
