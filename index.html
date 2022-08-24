@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>Truth or Dare</title>
+
+    <link href="./files/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="setup()">
+    <div class="section">
+        <div class="container">
+            <div class="intro-wrap">
+                <div class="name-text">Liam Collins</div>
+                <div class="paragraph-light" onclick="document.location='https://github.com/B0N3head'">https://github.com/B0N3head</div>
+                <h1 class="heading-jumbo" style="padding-top: 40px;">TRUTH or DARE</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="wf-section">
+        <div class="mobileText" style="display: inherit;padding-left: 25%;padding-right: 25%;">
+            <div class="columns w-row">
+                <div class="text-block">TRUTH</div>
+                <div class="text-block-3" id="truthText2">TRUTH</div>
+            </div>
+
+            <div class="columns w-row" style="padding-bottom: 40px;padding-top: 40px;align-content: center;">
+                <div class="w-col w-col-5">
+                    <a class="paragraph-light" id="helpText" onclick="help()"
+                        style="float: right;text-align: center;">Help</a>
+                </div>
+                <div class="w-col w-col-2">
+                    <div class="text-block-2" onclick="run()" style="padding-top: 0px;text-align: center;">OR</div>
+                </div>
+                <div class="w-col w-col-5">
+                    <a class="project-name-link" id="nextText2" onclick="run()"
+                        style="text-align: center;float: left;">Next</a>
+                </div>
+            </div>
+
+            <div class="columns w-row" style="padding-bottom: 100px;">
+                <div class="text-block">DARE</div>
+                <div class="text-block-4" onclick="openFun()" id="dareText2">DARE</div>
+            </div>
+        </div>
+
+        <div class="desktopText" style="display: none;">
+            <div class="columns w-row">
+                <div class="w-col w-col-5">
+                    <div class="text-block">TRUTH</div>
+                    <div class="text-block-3" id="truthText">TRUTH</div>
+                </div>
+                <div class="w-col w-col-2">
+                    <div class="text-block-2" onclick="run()">OR</div>
+                </div>
+                <div class="w-col w-col-5">
+                    <div class="text-block">DARE</div>
+                    <div class="text-block-4" onclick="openFun()" id="dareText">DARE</div>
+                </div>
+            </div>
+
+            <div class="work-description">
+                <a class="project-name-link" id="nextText" onclick="run()">Next Question</a>
+                <a class="paragraph-light" id="helpText" onclick="help()">Help</a>
+            </div>
+        </div>
+
+
+        <div class="wf-section">
+            <div class="text-block-5">Question History</div>
+            <p class="paragraph-2" id="historyTEXT" style="white-space: pre-wrap;">QUESTION HISTORY TEXT</p>
+        </div>
+        <div class="wf-section" style="margin-top: 30px;">
+            <div class="text-block-5" id="qpack">Question Packs</div>
+            <div class="paragraph-2" style="padding-bottom: 20px; margin-left: 10px;width: 60%;">
+                <span id="pack-lists"> 
+                </span>
+            </div>
+            <div class="wf-section" style="margin-top: 30px;">
+                <div class="text-block-5">Settings</div>
+                <div class="paragraph-2" style="padding-bottom: 20px; margin-left: 10px;">
+                    <input type="checkbox" id="removeDirections" name="removeDirections" value="removeDirections">
+                    <label for="removeDirections" style="display: inline;"> - Remove Directional Prompts ↔</label><br>
+                    <input type="checkbox" id="removeAlcoDares" name="removeAlcoDares" value="removeAlcoDares">
+                    <label for="removeAlcoDares" style="display: inline;"> - Remove Alcohol Dares 🥴</label><br>
+                    <input type="checkbox" id="removeSexualTruth" name="removeSexualTruth" value="removeSexualTruth">
+                    <label for="removeSexualTruth" style="display: inline;"> - Remove Lude Truths 😳</label><br>
+                    <input type="checkbox" id="removeSexualDares" name="removeSexualDares" value="removeSexualTruth">
+                    <label for="removeSexualDares" style="display: inline;"> - Remove Lude Dares 🤨</label><br>
+                    <input type="checkbox" id="resetIdCounter" name="resetIdCounter" value="removeSexualTruth">
+                    <label for="resetIdCounter" id="resetLable" style="display: inline;"> - Reset Question Counter 💚</label><br>
+                    <input type="checkbox" id="desktopText" name="desktopText" value="desktopText">
+                    <label for="desktopText" id="resetLable" style="display: inline;"> - Desktop Text 💻</label><br>
+                </div>
+            </div>
+            <div class="wf-section" style="margin-top: 70px;margin-bottom: 30px;">
+                <div class="text-block-5">Huge thanks to everyone bellow for helping with questions 🙏</div>
+                <p class="paragraph-2">Isaac, Abby, Sampson, Cooper, Brayden, Kankri, Josh, Sunny</p>
+            </div>
+        </div>
+
+        <div class="over">
+            <div class="child">
+                <h1>Welcome 😀</h1>
+                <p class="paragraph" style="padding-left: 20px;padding-right: 20px;">This website is still currently
+                    under
+                    development and is updated regularly. Currently atm questions answered are not kept after
+                    refreshing,
+                    I'm working on it for an update but try not to refresh while playing (you will start to get repeat
+                    questions otherwise).</p>
+                <p>
+                    <button class="btn" onclick="closeFun(over)"
+                        style="padding-left: 20px;padding-right: 20px;padding-top: 5px;padding-bottom: 5px;">Close</button>
+                </p>
+            </div>
+        </div>
+</body>
+
+<script type="text/javascript">window.addEventListener("beforeunload", function (e) { e.preventDefault();  e.returnValue = "";});</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="files/webfont.js" type="text/javascript"></script>
+<script src="files/tOrD.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({ google: { families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"] } });</script>
+</html>
